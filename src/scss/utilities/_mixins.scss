@@ -1,0 +1,18 @@
+//font
+@mixin font($size:null,$weight:null,$color:null,$style:null){
+  font:{
+    size: $size;
+    weight:$weight;
+    style:$style;
+  }
+  color:$color;
+  @content;
+}
+
+@mixin background_position{
+  background-size: cover;
+  background-position: center;
+}
+
+
+

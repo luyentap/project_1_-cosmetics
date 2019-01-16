@@ -1,0 +1,37 @@
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  background: #392D49;
+  &__head{
+    @include font($size:12px,$color:white,$style:italic);
+    //color:$green;
+    //font-size: 12px;
+    //font-style: italic;
+    margin: 10px;
+    border-top: solid 0.2px #4b3b60;
+
+  }
+  &__row{
+    border-top: solid 0.1px #4b3b60;
+
+    font-size: 11px;
+    .team-meta{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__logo{
+        object-fit: cover;
+        width: 20px;
+        height: 20px;
+      }
+      &__name{
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    &:hover{
+      background:#4b3b60 ;
+    }
+  }
+}

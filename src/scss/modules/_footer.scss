@@ -1,0 +1,53 @@
+
+.footer {
+  background: black;
+  color: grey;
+  &__contact {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 40px 0 20px 0;
+    border-bottom: solid 1px grey;
+
+    font-size: 14px;
+    .footer__item {
+      @media screen and (min-width: $screen-mobile){
+        width: 100%;
+      }
+      @media screen and (min-width: $screen-tablet){
+
+      }
+      @media screen and (min-width: $screen-pc){
+        width: auto;
+      }
+      &__header {
+        @include font(20px, normal, white, null);
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__above {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0;
+
+    font-size: 12px;
+    &--left {
+      @media screen and (min-width: $screen-mobile){
+        width: 100%;
+      }
+      @media screen and (min-width: $screen-tablet){
+        width: auto;
+      }
+      @media screen and (min-width: $screen-pc){
+      }
+    }
+  }
+
+
+}
