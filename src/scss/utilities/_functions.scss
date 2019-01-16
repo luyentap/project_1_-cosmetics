@@ -1,0 +1,20 @@
+/*
+retrieve color from $colors map ie. `color(primary, base)`
+ --  example in use: color: color(primary, green);
+https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps
+ */
+@function color($color-name, $color-variant) {
+  // map inception
+  @return map-get(map-get($colors, $color-name), $color-variant);
+}
+
+
+/*
+get color of font icon
+ -- paramter: name of icon
+ -- return:color icon
+*/
+@function color_icon($name) {
+  // map inception
+  @return map-get($color_icon,$name);
+}

@@ -1,0 +1,74 @@
+.contain_header{
+  border-bottom: solid  1px $grey;
+  z-index: 999;
+  height: 12vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+
+  //width: 100%;
+  &-logo {
+    font-family: "Thirsty Script Extrabold";
+    font-size: 34px;
+    span {
+      border-radius: 50%;
+      background: #789629;
+      padding: 10px;
+      color: white;
+    }
+
+  }
+  &__primary {
+    display: flex;
+    justify-content: space-evenly;
+
+    font-family: "Open Sans";
+    font-size: 12px;
+    li {
+      padding: 20px;
+      a {
+        color: black;
+      }
+    }
+
+    @media screen and (min-width: $screen-mobile) {
+      display: none;
+    }
+    @media screen and (min-width: $screen-tablet) {
+
+    }
+    @media screen and (min-width: $screen-pc) {
+      display: inline-flex;
+
+    }
+
+  }
+  &__right {
+    display: flex;
+    button {
+      padding: 20px;
+      border: solid transparent 0px;
+      background: transparent;
+      i {
+        font-size: 14px;
+      }
+      .fa-bars {
+
+        @media screen and (min-width: $screen-mobile) {
+          visibility: visible;
+        }
+        @media screen and (min-width: $screen-tablet) {
+        }
+        @media screen and (min-width: $screen-pc) {
+          visibility: hidden;
+
+        }
+
+      }
+    }
+
+  }
+}

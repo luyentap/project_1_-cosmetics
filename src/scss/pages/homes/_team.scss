@@ -1,0 +1,53 @@
+.team {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  &__avatar {
+    @media screen and (min-width: $screen-mobile) {
+      order: 2;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      order: 1;
+    }
+    @media screen and (min-width: $screen-pc) {
+    }
+  }
+  &__description {
+    @media screen and (min-width: $screen-mobile) {
+      order: 1;
+
+      margin-left: 5%;
+      background: url("../img/home/Layer 96.png");
+      height: 40vh;
+      width: 100%;
+
+    }
+    @media screen and (min-width: $screen-tablet) {
+      width: 70%;
+      order: 2;
+    }
+    @media screen and (min-width: $screen-pc) {
+    }
+    p {
+      margin-bottom: 20px;
+      span {
+        color: $green;
+        size: 60px;
+      }
+    }
+    &__position {
+      text-transform: uppercase;
+      span {
+        font-style: italic;
+        color: black;
+        opacity: 0.8;
+        text-transform: none;
+      }
+    }
+  }
+  &__img__intro {
+    width: 50vh;
+  }
+}
