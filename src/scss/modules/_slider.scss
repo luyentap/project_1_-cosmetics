@@ -1,0 +1,86 @@
+.rev-slider-wrapper{
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+
+  background: url("../../img/hero-bg-1.jpg");
+  background-size:cover;
+
+  //dot grid css
+  .dot-grid{
+    //background: hsla(209, 100%, 47%, 0.1);
+    background-image: radial-gradient(hsla(209, 100%, 47%, 1.00) 5%, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  &__image{
+    animation:  4s flip_image2 normal;
+  }
+  .intro{
+    position: absolute;
+    right: 20%;
+    top:20%;
+
+    @include font($weight:bold,$color:white);
+    //font-weight: bold;
+    //color:white;
+    &__rank{
+      margin: 0px;
+      padding: 0;
+      width: 0%;
+      overflow: hidden;
+
+      //pointer
+      border-right: solid 1px white;
+
+      font-size: 16px;
+      white-space: nowrap;//one line
+
+      animation: type 5s steps(22) infinite;
+    }
+    &__name{
+      margin: 0px;
+
+      font-size:60px;
+
+      animation: shake 4s cubic-bezier(.36,.07,.19,.97) infinite;
+      transform: translate3d(0, 0, 0);
+      &--green{
+        color:$green;
+      }
+    }
+    &__text{
+      @include font($size:12px,$weight:lighter);
+      //font-size: 12px;
+      //font-weight: lighter;
+    }
+    &__button{
+      margin-top:30px;
+      padding: 10px;
+
+      background: #8818f5;
+
+      border: solid 1px;
+      border-radius: 20px;
+
+      @include  font(12px,bold,white,italic );
+      //color:white;
+      //font-size: 12px;
+      //font-weight: bold;
+      //font-style: italic;
+      text-transform: uppercase;
+
+    }
+  }
+  .btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &__left{
+      padding: 20px;
+    }
+    &__right{
+      padding: 20px;
+    }
+  }
+}

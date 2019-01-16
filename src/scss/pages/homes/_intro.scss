@@ -1,0 +1,93 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f1f1;
+  overflow: hidden;
+  img {
+    z-index: -1;
+  }
+  &__left {
+    color: #78973c;
+    text-align: center;
+    &__header {
+      font-family: 'Pinyon Script', cursive;
+      font-family: 'Great Vibes', cursive;
+      font-size: 70.27px;
+
+    }
+    &__text {
+      color: #baacaa;
+      font-size: 20px;
+    }
+    &__price {
+      font-size: 45px;
+      span {
+        font-size: 22px;
+      }
+    }
+    &__buy {
+      text-decoration: underline;
+      font-size: 18px;
+    }
+  }
+
+  &__right {
+    overflow: hidden;
+    img {
+
+    }
+  }
+}
+.present {
+  margin: 13px 0;
+  //text-align: center;
+  height: 5em;
+
+  @media screen and (min-width: $screen-mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    //justify-content: center;
+    align-items: stretch;
+  }
+  @media screen and (min-width: $screen-tablet) {
+    justify-content: space-evenly;
+  }
+  @media screen and (min-width: $screen-pc) {
+  }
+
+  .present__item {
+    align-self: center;
+    @media screen and (min-width: $screen-mobile) {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+
+      &:nth-child(1), &:nth-child(2) {
+        border-bottom: solid 1px #a3a3a3;
+      }
+    }
+    @media screen and (min-width: $screen-tablet) {
+      text-align: center;
+      width: 30%;
+
+      &:nth-child(1), &:nth-child(2) {
+        border-right: solid 1px #a3a3a3;
+        border-bottom: none;
+        padding-right: 10%;
+      }
+
+    }
+    @media screen and (min-width: $screen-pc) {
+    }
+    i {
+      font-size: 28px;
+
+      span {
+        font-size: 14px;
+
+      }
+    }
+  }
+}

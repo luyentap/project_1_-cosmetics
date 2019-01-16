@@ -1,0 +1,163 @@
+$bg-color: #ecc;
+$color: green;
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+
+  //change default value of the ul tag
+  padding-inline-start: 0px;
+}
+h1,h2,h3,h4,h5,h6,p,span,hr{
+  padding: 0;
+  margin: 0;
+}
+hr{
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $grey;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* Style all font awesome icons */
+.fa {
+  //padding: 5px;
+  //font-size: 5px;
+  //width: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  background: color_icon(fa);
+  color: white;
+}
+
+.fa-twitter {
+  background: color_icon(twitter);
+  color: white;
+}
+
+.fa-google {
+  background: color_icon(google);
+  color: white;
+}
+
+.fa-linkedin {
+  background: color_icon(linkedin);
+  color: white;
+}
+
+.fa-youtube {
+  background: color_icon(youtube);
+  color: white;
+}
+
+.fa-instagram {
+  background: color_icon(intagram);
+  color: white;
+}
+
+
+//backgroud color and color font--> use in class : faster
+.bg-green{
+  background: $green;
+}
+.bg-yellow{
+  background: $yellow;
+}
+
+.bg-purple{
+  background: $purple;
+}
+.bg-red{
+  background: $red;
+}
+.bg_white{
+  background: #fff;
+}
+.bg_grey{
+  background: $grey;
+}
+.bg_blue-sky{
+  background: $blue-sky;
+}
+.bg_pink{
+  background: $pink;
+}
+.cl-white{
+  color:#fff;
+}
+.cl-green{
+  color: $green;
+}
+.cl-yellow{
+  color: $yellow;
+}
+
+.cl-purple{
+  color: $purple;
+}
+.cl_white{
+  color: #fff;
+}
+.cl_grey{
+  color: $grey;
+}
+.cl_blue-sky{
+  color: $blue-sky;
+}
+.cl_pink{
+  color: $pink;
+}
+//right, left margin: align all page
+.container{
+  margin: 0 5% 30px 5%;
+}
+section{
+  margin: 10px 0;
+}
+
+////set flex-basis to flex item,
+//.col-lg-8{
+//  display: flex;
+//  //flex:  0 0 66%;
+//  width: 66%;
+//  flex-wrap: wrap;
+//}
+//.col-sm-6{
+//  display: flex;
+//  //flex: 0 0 45%;
+//  width: 45%;
+//
+//  flex-wrap: wrap;
+//
+//}
+//.col-lg-4{
+//  display: flex;
+//  //flex: 0 0 34%;
+//  width: 34%;
+//
+//  flex-wrap: wrap;
+//}
+//
+
+/*********************************************************
+==========================================================
+end the common
+===========================================================
+ *********************************************************/
+html,body{
+  margin: 0;
+  padding: 0;
+
+  //font-family: Georgia;
+  font-family: $font-open_sans;
+  background:$color-background;
+
+}
