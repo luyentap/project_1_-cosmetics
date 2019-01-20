@@ -21,6 +21,10 @@ gulp.task('views', function buildHTML() {
         .pipe(pug({
             // Your options in here.
         }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest("src/html/"))
         .pipe(browserSync.stream());
 });
