@@ -16,26 +16,30 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-
-// Watch Sass & Serve
-gulp.task('serve', ['sass'], function() {
-    browserSync.init({
-        server: "./src"  
-    });
-
-    gulp.watch(['src/scss/*.scss'], ['sass']);
-    gulp.watch("src/*.html").on('change', browserSync.reload);
-});
-
-
-
 gulp.task('views', function buildHTML() {
-    return gulp.src('src/*.pug')
+    return gulp.src('src/pug/*.pug')
         .pipe(pug({
             // Your options in here.
         }))
-        .pipe(gulp.dest("src/"))
+        .pipe(gulp.dest("src/html/"))
+        .pipe(browserSync.stream());
 });
+
+
+// Watch Sass & Serve
+gulp.task('serve', ['sass','views'], function() {
+    browserSync.init({
+        server: "./src/html/"
+    });
+
+    gulp.watch(['src/scss/*.scss'], ['sass']);
+    gulp.watch(['src/pug/*.pug'], ['views']);
+    gulp.watch("src/html/*.html").on('change', browserSync.reload);
+});
+
+
+
 
 // Default Task
 gulp.task('default', ['serve']);
+
