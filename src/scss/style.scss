@@ -15,6 +15,8 @@
 // the header
 // ==========================================================================
 @import "modules/header";
+@import "modules/table";
+@import "modules/form";
 //==========================================================
 //all page page
 //===========================================================
@@ -34,28 +36,26 @@
 //////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 
-.shopping-cart{
+.account{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
   .table{
-    width: 100%;
-    border: none;
-    border-collapse: collapse;
-    padding: 0;
-    margin: 0;
-    thead{
-      background: #eeeeee;
-      th{
-        @include font(18px,400,black,null){text-transform: uppercase};
-        border: solid 1px $grey;
-
+    tr{
+      td:nth-child(3){
+        color: red;
       }
     }
-    tbody{
-      tr{
-        border: solid 1px $grey;
-        text-align: center;
-      }
-      td{
-        border: solid 1px $grey;
+  }
+  &-detail{
+    &__head{
+      @include font(16px,500,black,null){text-transform: uppercase};
+      padding-bottom: 20px;
+      border-bottom: solid 1px $grey;
+    }
+    .account-detail{
+      p{
+        margin-bottom: 5px;
+        color:red;
       }
     }
   }
