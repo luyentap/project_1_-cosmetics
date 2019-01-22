@@ -1,0 +1,205 @@
+.detail-product {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 40px 0;
+  @media screen and (min-width: $screen-pc) {
+    grid-template-columns: 1fr 1fr;
+
+  }
+  .detail-img {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    @media screen and (min-width: $screen-tablet) {
+      margin-bottom: 0px;
+
+    }
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      img {
+        height: 100%;
+        object-fit: cover;
+        &:nth-child(1),&:nth-child(6){
+          object-fit: none;
+        }
+      }
+    }
+    &__product {
+      border: solid $grey 1px;
+      height: 100%;
+      width: 100%;
+      margin: 0 20px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+  .detail-description {
+    display: grid;
+    grid-gap: 10px;
+    &__name {
+      @include font(25px, bold, black, null) {
+        text-transform: uppercase
+      }
+    ;
+      opacity: 0.8;
+      margin-bottom: -8px;
+    }
+    &__code {
+      @extend .detail-description__name;
+      font-size: 12px;
+    }
+    &__price {
+      @include font(30px, bold, black, null);
+      font-family: Charm;
+      &-old {
+        @include font(20px, bold, $grey, null);
+      }
+    }
+    &__text {
+      font-size: 14px;
+    }
+    &__form {
+      label {
+        @extend .detail-description__name;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      select {
+        padding: 10px 0;
+        width: 80%;
+        margin-bottom: 10px;
+
+        @include font(16px, normal, black, null);
+        opacity: 0.8;
+      }
+      .product__detail__button {
+        font-weight: bold;
+
+        button {
+          padding: 10px 20px;
+          margin: 10px 2px;
+          border-radius: 15px;
+          border: solid 1px $grey;
+          font-weight: bold;
+          font-weight: bold;
+
+          background: transparent;
+          &:nth-child(2) {
+            background: $green;
+          }
+          i {
+            font-size: 10px;
+            color: white;
+          }
+          i.fa-refresh {
+            color: black;
+          }
+        }
+
+      }
+    }
+    &__social {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      height: 25px;
+      //shipping and return
+      p:first-child {
+        @include font(12px, null, $grey, null);
+        span {
+          color: red;
+        }
+      }
+      //button social
+      button {
+
+      }
+      button{
+        border: solid 1px transparent;
+        font-weight: bold;
+        &:nth-child(2) {
+          background: #125688;
+          padding: 2px;
+          .fa-facebook{
+            background: white;
+            color:#125688;
+            padding: 2px;
+          }
+        }
+        &:nth-child(4) {
+          color: black;
+          border:solid 1px grey;
+        }
+        &:nth-child(6) {
+          background: white;
+          color: red;
+          border:solid 1px grey;
+        }
+        &:nth-child(8) {
+          background: #125688;
+          color: white;
+        }
+        &:nth-child(9) {
+          background: #125688;
+          color: white;
+        }
+      }
+      &__number{
+        /* Message box starts here */
+        .arrow-message {
+          clear: both;
+          position: relative;
+        }
+        .arrow-message .arrow {
+          width: 12px;
+          height: 20px;
+          overflow: hidden;
+          position: relative;
+          float: left;
+          top: 6px;
+          right: -1px;
+        }
+        .arrow-message .arrow .outer {
+          width: 0;
+          height: 0;
+          border-right: 20px solid #000000;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .arrow-message .arrow .inner {
+          width: 0;
+          height: 0;
+          border-right: 20px solid #ffffff;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          position: absolute;
+          top: 0;
+          left: 2px;
+        }
+        .arrow-message .message-body {
+          float: left;
+          width: 10px;
+          height: auto;
+          border: 1px solid #CCC;
+          background-color: #ffffff;
+          border: 1px solid #000000;
+          padding: 2px 8px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -o-border-radius: 5px;
+          border-radius: 5px;
+        }
+        .arrow-message .message-body p {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+}

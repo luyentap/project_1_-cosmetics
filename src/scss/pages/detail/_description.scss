@@ -1,0 +1,111 @@
+
+
+//contain description and sidebar
+.more-detail {
+  @media screen and (min-width: $screen-mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+  }
+  @media screen and (min-width: $screen-pc) {
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 30px;
+  }
+}
+
+.description-product {
+  .description-head {
+    @include font(18px, bold, black, null);
+    text-transform: uppercase;
+    display: flex;
+    @include underline;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    p {
+      margin-right: 5%;
+      opacity: 0.6;
+    }
+    p:nth-child(1) {
+      opacity: 1;
+    }
+  }
+  .description-body {
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+
+      //div {
+      @media screen and (min-width: $screen-mobile) {
+        flex-direction: column;
+      }
+      @media screen and (min-width: $screen-pc) {
+        flex-direction: row;
+      }
+    }
+
+    &__title {
+      @include font(15px, 400, black, null);
+      margin-bottom: 15px;
+
+      span {
+        padding-bottom: 2px;
+        border-bottom: solid 1px $grey;
+      }
+    }
+    &__text {
+      @include font(14px, 400, $grey, null);
+      text-align: left;
+      width: 80%;
+    }
+    &__img {
+      height: 20%;
+      width: 20%;
+      @media screen and (min-width: $screen-mobile) {
+        order: -1;
+      }
+      @media screen and (min-width: $screen-pc) {
+        order: inherit;
+      }
+    }
+  }
+}
+
+.sibar-detail {
+  @media screen and (min-width: $screen-mobile) {
+    display: none;
+  }
+  @media screen and (min-width: $screen-pc) {
+    display: block;
+  }
+
+  .product-best {
+    &__header {
+      @include underline;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+
+    }
+    &__item {
+      &__img {
+
+      }
+      &__description {
+        p:nth-child(1) {
+          font-weight: bold;
+        }
+        p:nth-child(2) {
+          span {
+            font-weight: 300;
+          }
+        }
+        p:nth-child(3) {
+          font-weight: bold;
+          font-family: Charm;
+        }
+      }
+    }
+  }
+}
