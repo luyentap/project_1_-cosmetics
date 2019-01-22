@@ -1,0 +1,30 @@
+.contact{
+  &__title{
+    font-weight: 500;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-evenly;
+    &__left{
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    &__right {
+      .form{
+        background: white;
+        &-element{
+          display: grid;
+          grid-template-columns: 1fr 5fr;
+          margin-bottom: 30px;
+          label{
+            margin-right: 18px;
+          }
+          textarea{
+            height: 100px;
+            border: solid 1px $grey;
+          }
+        }
+      }
+    }
+  }
+}
