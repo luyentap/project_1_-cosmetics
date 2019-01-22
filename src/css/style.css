@@ -1510,6 +1510,26 @@ html, body {
   padding: 10px 5px;
 }
 
+.about-us__title {
+  font-weight: 500;
+}
+.about-us__content {
+  display: flex;
+  justify-content: space-between;
+}
+.about-us__content__left {
+  object-fit: cover;
+}
+.about-us__content__right .header-logo {
+  margin-bottom: 20px;
+}
+.about-us__content__right__text {
+  font-weight: 300;
+}
+.about-us__content__right__more {
+  color: #ccc;
+}
+
 .footer {
   background: black;
   color: grey;
