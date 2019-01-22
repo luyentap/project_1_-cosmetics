@@ -242,6 +242,30 @@ html, body {
   padding: 20px 0;
 }
 
+.form {
+  background: #ccc;
+  padding: 40px;
+}
+.form__title {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.form-element label {
+  font-size: 14px;
+}
+.form-element input {
+  width: 100%;
+  padding: 0 20px;
+  height: 30px;
+}
+.form-element button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
 .intro {
   display: flex;
   justify-content: space-between;
@@ -929,6 +953,7 @@ html, body {
 }
 
 .link-intro {
+  border-bottom: solid 1px #ccc;
   padding: 10px 0;
 }
 
@@ -1403,6 +1428,88 @@ html, body {
   color: black;
 }
 
+.shopping-cart {
+  position: relative;
+  margin: 30px 0 80px 0;
+  width: 100%;
+}
+.shopping-cart tr td:nth-child(3), .shopping-cart tr td:nth-child(5) {
+  font-family: Charm;
+  font-weight: bold;
+}
+.shopping-cart tr td:nth-child(3) span, .shopping-cart tr td:nth-child(5) span {
+  vertical-align: sub;
+}
+.shopping-cart__button {
+  float: right;
+  clear: both;
+  margin-top: 20px;
+}
+.shopping-cart__button button {
+  color: white;
+  border: solid transparent;
+  padding: 5px 6px;
+  margin-right: 5px;
+}
+.shopping-cart__button button:nth-child(1), .shopping-cart__button button:nth-child(2) {
+  background: black;
+}
+.shopping-cart__button button:nth-child(3) {
+  background: #28a745;
+}
+
+.account {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 20px;
+}
+.account .table tr td {
+  padding: 20px;
+}
+.account .table tr td:nth-child(3) {
+  color: red;
+}
+.account-detail__head {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #ccc;
+}
+.account-detail__body i {
+  margin-right: 10px;
+}
+.account-detail__body p {
+  margin-bottom: 5px;
+}
+.account-detail__body p span {
+  font-size: 18px;
+}
+
+.register__title {
+  font-weight: 400;
+}
+.register .form:nth-child(3) {
+  padding-top: 0;
+}
+.register .form:nth-child(3) .form-element__button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login__head {
+  display: flex;
+  justify-content: space-between;
+}
+.login__head button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+}
+
 .footer {
   background: black;
   color: grey;
@@ -1501,25 +1608,6 @@ html, body {
   100% {
     transform: rotateX(0deg);
   }
-}
-.account {
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-}
-.account .table tr td:nth-child(3) {
-  color: red;
-}
-.account-detail__head {
-  font-size: 16px;
-  font-weight: 500;
-  color: black;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-  border-bottom: solid 1px #ccc;
-}
-.account-detail .account-detail p {
-  margin-bottom: 5px;
-  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

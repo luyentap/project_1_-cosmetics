@@ -24,6 +24,10 @@
 @import "pages/detail/index";
 @import "pages/grid/index";
 @import "pages/list/index";
+@import "pages/cart/index";
+@import "pages/account/index";
+@import "pages/register/index";
+@import "pages/login/index";
 //============================================================
 // the footer of page
 //============================================================
@@ -35,28 +39,3 @@
 
 //////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
-
-.account{
-  display: grid;
-  grid-template-columns: 4fr 1fr;
-  .table{
-    tr{
-      td:nth-child(3){
-        color: red;
-      }
-    }
-  }
-  &-detail{
-    &__head{
-      @include font(16px,500,black,null){text-transform: uppercase};
-      padding-bottom: 20px;
-      border-bottom: solid 1px $grey;
-    }
-    .account-detail{
-      p{
-        margin-bottom: 5px;
-        color:red;
-      }
-    }
-  }
-}
