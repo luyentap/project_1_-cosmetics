@@ -1302,6 +1302,216 @@ end the common
   font-family: Charm;
 }
 
+.grid-banner {
+  height: 20vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #afb2b7;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 450px) {
+  .grid-banner {
+    display: none;
+  }
+}
+@media screen and (min-width: 750px) {
+  .grid-banner {
+    display: flex;
+  }
+}
+.grid-banner__text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  color: white;
+}
+.grid-banner__text:first-child {
+  font-family: Charm;
+  font-size: 20px;
+}
+.grid-banner__text p {
+  text-transform: uppercase;
+}
+.grid-banner__img {
+  width: 40vh;
+  height: 40vh;
+}
+
+.gridpage {
+  display: grid;
+}
+@media screen and (min-width: 750px) {
+  .gridpage {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gridpage {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.sidebar-grid__item {
+  margin-bottom: 20px;
+}
+.sidebar-grid__item__header {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+.sidebar-grid__item__body {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-grid__item__body .list {
+  position: relative;
+}
+.sidebar-grid__item__body .list ul {
+  border-bottom: dotted 1px grey;
+  border-top: 0;
+  padding: 10px 0;
+  border-right: 0;
+  border-left: 0;
+  list-style: circle;
+  position: relative;
+  margin: 0;
+}
+.sidebar-grid__item__body .list:hover li {
+  display: inherit;
+}
+.sidebar-grid__item__body .list:hover i {
+  display: none;
+}
+.sidebar-grid__item__body .list li {
+  margin-left: 20px;
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+.sidebar-grid__item__body .list li:first-child {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #28a745;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+}
+.sidebar-grid__item__body .list i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.sidebar-grid__item:nth-child(2) {
+  font-size: 12px;
+  color: grey;
+}
+.sidebar-grid__item:nth-child(3) {
+  font-size: 14px;
+  font-style: italic;
+  color: #ccc;
+}
+.sidebar-grid__item:nth-child(3) button {
+  width: auto;
+  border: solid 1px #ccc;
+  background: transparent;
+  padding: 3px 5px;
+}
+.sidebar-grid__item:nth-child(3) button:nth-child(1) {
+  background: black;
+  color: white;
+}
+.sidebar-grid__item:nth-child(3) .sidebar-grid__item__body {
+  display: inline;
+}
+@media screen and (min-width: 450px) {
+  .sidebar-grid__banner {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .sidebar-grid__banner {
+    display: block;
+  }
+}
+
+.grid-content {
+  margin-left: 20px;
+}
+.grid-content__head {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.grid-content__head__list a {
+  color: black;
+}
+.grid-content__head__list a i {
+  margin-right: 6px;
+}
+.grid-content__head__paging i, .grid-content__head__paging span {
+  margin: 0 8px;
+}
+.grid-content__body {
+  display: grid;
+}
+@media screen and (min-width: 450px) {
+  .grid-content__body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .grid-content__body {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.grid-content__body .product__detail {
+  font-weight: bold;
+  text-align: center;
+}
+.grid-content__body .product__detail__type {
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+.grid-content__body .product__detail__price {
+  font-family: Lobster;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.grid-content__body .product__detail__price__new {
+  color: #28a745;
+}
+.grid-content__body .product__detail__price__old {
+  opacity: 0.4;
+}
+.grid-content__body .product__detail__button button {
+  padding: 14px;
+  margin: 10px 2px;
+  border-radius: 15px;
+  border: solid 1px #ccc;
+  font-weight: bold;
+  font-weight: bold;
+  background: transparent;
+}
+.grid-content__body .product__detail__button button:nth-child(2) {
+  background: #28a745;
+}
+.grid-content__body .product__detail__button button i {
+  font-size: 10px;
+  color: white;
+}
+.grid-content__body .product__detail__button button i.fa-refresh {
+  color: black;
+}
+
 .footer {
   background: black;
   color: grey;
