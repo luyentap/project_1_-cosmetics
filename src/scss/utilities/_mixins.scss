@@ -13,3 +13,7 @@
   background-size: cover;
   background-position: center;
 }
+
+@mixin underline{
+  border-bottom:solid 1px $grey;
+}

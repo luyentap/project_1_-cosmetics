@@ -1,0 +1,152 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a Sản Phẩm >
+        a.cl-green Trang Sức >
+        a.cl-green Lắc tay
+
+    .detail-product
+        .detail-img
+            .detail-img__list
+                img(src="../img/detail/03_Detail_03.jpg")
+                img(src="../img/detail/Layer 80.jpg")
+                img(src="../img/detail/Layer 82.jpg")
+                img(src="../img/detail/Layer 83.jpg")
+                img(src="../img/detail/Layer 84.jpg")
+                img(src="../img/detail/03_Detail_07.jpg")
+            img.detail-img__product(src="../img/detail/Layer 79.jpg")
+        .detail-description
+            h5.detail-description__name Lắc tay TyFFanny xu hướng mới nhất
+            p.detail-description__code Tyffancy ms 3201
+            p.detail-description__price 955.000đ
+                span.detail-description__price-old 999.000đ
+            p.detail-description__text
+                | Không thể phủ nhận, thời trang và phong cách chính là “tuyên ngôn” không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó, việc mua sắm thời trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp sống vui, sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ của mình trước những xu hướng ngày một đa dạng hơn trong thế giới thời trang, nhiều chị em không ngần ngại chi tiêu “mạnh tay” để sở hữu những
+                | món đồ yêu thích.
+            form.detail-description__form
+                div
+                    label MÀU SẮC
+                    select
+                        option  Màu bạc
+                div
+                    label Size
+                    select
+                        option 12
+
+                .product__detail__button
+                    button MUA HÀNG
+                    button
+                        i.fa.fa-heart
+                    button
+                        i.fa.fa-refresh
+
+            .detail-description__social
+                mixin arrow_message(number)
+                    .detail-description__social__number
+                        .arrow-message
+                            .arrow
+                                .outer
+                                .inner
+                            .message-body= number
+                p Shopping &
+                    span Returns
+                button.cl-white
+                    i.fa.fa-facebook
+                    |   like
+                +arrow_message(0)
+                button
+                    i.fa.fa-twitter.cl_blue-sky
+                    |  Twitter
+                +arrow_message(0)
+                button
+                    i.fa.fa-google
+                    | +1
+                +arrow_message(0)
+                button
+                    i.fa.fa-linkedin
+                    | Share
+                button
+                    i.fa.fa-pinterest
+                    | Pin it
+
+    //description
+    .more-detail
+        .description-product
+            .description-head
+                p Đặc điểm nổi bật
+                p Thông tin sản phẩm
+                p Đánh gía
+
+            .description-body
+                .item
+                    div
+                        p.description-body__title
+                            span THE MARK
+                            | OF A LEGEND
+                        p.description-body__text
+                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                    img.description-body__img(src="../img/detail/Layer 88.jpg")
+                .item
+                    img.description-body__img(src="../img/detail/Layer 87.jpg")
+                    div
+                        p.description-body__title
+                            span THE MARK
+                            | OF A LEGEND
+                        p.description-body__text
+                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                .item
+                    div
+                        p.description-body__title
+                            span THE MARK
+                            | OF A LEGEND
+                        p.description-body__text
+                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                    img.description-body__img(src="../img/detail/Layer 85 copy.jpg")
+                .item
+                    img.description-body__img(src="../img/detail/Layer 86.jpg")
+
+                    div
+                        p.description-body__title
+                            span THE MARK
+                            | OF A LEGEND
+                        p.description-body__text
+                            |Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+
+        .sibar-detail
+            //product__best__seller
+            .product-best
+                h3.product-best__header Sản phẩm bán chạy
+                mixin item
+                    .product-best__item
+                        img.product-best__item__img(src="../img/detail/Layer 31 copy.jpg")
+                        .product-best__item__description
+                            p Mỹ phẩm châu âu
+                            p
+                                each val in [1, 2, 3, 4]
+                                    i.fa.fa-heart
+                                span (4 lượt mua)
+                            p 35.000đ
+                +item
+                +item
+                +item
+            //best buy
+            .product-best
+                h3.product-best__header Sản phẩm Mua Nhiều
+
+                mixin item
+                    .product-best__item
+                        img.product-best__item__img(src="../img/detail/Layer 31 copy.jpg")
+                        .product-best__item__description
+                            p Mỹ phẩm châu âu
+                            p
+                                each val in [1, 2, 3, 4]
+                                    i.fa.fa-heart
+                                span (4 lượt mua)
+                            p 35.000đ
+                +item
+                +item
+                +item
+
+include modules/footer
