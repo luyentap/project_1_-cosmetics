@@ -1,0 +1,151 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a Sản Phẩm >
+        a.cl-green Trang Sức >
+
+.grid-banner
+    .grid-banner__text
+        h1.grid-banner__text__header Giảm giá 50%
+        p Trong vòng 30 ngày </br> (25/5-28/5/2015)
+
+    img.grid-banner__img(src="../img/grid/av.png")
+
+.container.gridpage
+    .sidebar-grid
+        .sidebar-grid__item
+            h3.sidebar-grid__item__header
+                i.fa.fa-bars
+                | Danh mục sản phẩm
+            .sidebar-grid__item__body
+                .list
+                    ul
+                        li Mỹ phẩm
+                    i.fa.fa-caret-down
+                .list
+                    ul
+                        li Trang sức
+                        li vòng tay
+                        li Nhẫn
+                        li Lắc chân
+                        li phụ kiện khác
+                        li Giày
+                    i.fa.fa-caret-down
+                .list
+                    ul
+                        li Phụ kiện
+                    i.fa.fa-caret-down
+                .list
+                    ul
+                        li Nước hoa
+                    i.fa.fa-caret-down
+        .sidebar-grid__item
+            h3.sidebar-grid__item__header So sánh sản phẩm
+
+            .sidebar-grid__item__body
+                p Bạn chưa có sản phẩm nào
+        .sidebar-grid__item
+            h3.sidebar-grid__item__header Tag sản phẩm
+            .sidebar-grid__item__body
+                button Đồng hồ
+                button Túi
+                button Phụ kiện
+                button Đồng hồ
+                button Túi
+                button Giày
+                button Sandal
+                button Áo sơ mi
+                button Nước hoa
+                button Giày
+                button Sandal
+                button Trẻ em
+                button Thời trang nữ
+                button Trẻ em
+                button Thời trang nữ
+        img.sidebar-grid__banner(src="../img/grid/04_Gird_03.jpg")
+
+    .list-content
+        .list-content__head
+            .list-content__head__list
+                a(href="grid.html")
+                    i.fa.fa-th-list
+                a(href="list.html")
+                    i.fa.fa-list-ul
+            p.list-content__head__paging
+                i.fa.fa-caret-left
+                    span 1
+                    span 2
+                    span 3
+                    i.fa.fa-caret-right
+        .list-content__body
+            .product
+                img(src="../img/home/Product copy 4.png")
+                .product__detail
+                    .product__detail__type Mỹ phẩm châu Âu hàng đầu thế giới
+                    .product__detail__buy
+                        each val in [1, 2, 3, 4]
+                            i.fa.fa-heart
+                        span ( 4 lượt mua)
+                    p.product__detail__text
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt earum et, expedita illo in iste laudantium nam quasi, ratione sint veniam veritatis vitae. Cumque iusto quia rem repellat sint.
+                    p.product__detail__price 35000đ
+
+                    .product__detail__button
+                        button MUA HÀNG
+                        button
+                            i.fa.fa-heart
+                        button
+                            i.fa.fa-refresh
+            .product
+                img(src="../img/home/Product copy 4.png")
+                .product__detail
+                    .product__detail__type Mỹ phẩm châu Âu hàng đầu thế giới
+                    .product__detail__buy
+                        each val in [1, 2, 3, 4]
+                            i.fa.fa-heart
+                        span ( 4 lượt mua)
+                    p.product__detail__text
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt earum et, expedita illo in iste laudantium nam quasi, ratione sint veniam veritatis vitae. Cumque iusto quia rem repellat sint.
+                    p.product__detail__price 35000đ
+
+                    .product__detail__button
+                        button MUA HÀNG
+                        button
+                            i.fa.fa-heart
+                        button
+                            i.fa.fa-refresh
+            .product
+                img(src="../img/home/Product copy 4.png")
+                .product__detail
+                    .product__detail__type Mỹ phẩm châu Âu hàng đầu thế giới
+                    .product__detail__buy
+                        each val in [1, 2, 3, 4]
+                            i.fa.fa-heart
+                        span ( 4 lượt mua)
+                    p.product__detail__text
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt earum et, expedita illo in iste laudantium nam quasi, ratione sint veniam veritatis vitae. Cumque iusto quia rem repellat sint.
+                    p.product__detail__price 35000đ
+
+                    .product__detail__button
+                        button MUA HÀNG
+                        button
+                            i.fa.fa-heart
+                        button
+                            i.fa.fa-refresh
+
+        .list-content__head
+            .list-content__head__list
+                a(href="grid.html")
+                    i.fa.fa-th-list
+                a(href="list.html")
+                    i.fa.fa-list-ul
+            p.list-content__head__paging
+                i.fa.fa-caret-left
+                    span 1
+                    span 2
+                    span 3
+                    i.fa.fa-caret-right
+
+include modules/footer
