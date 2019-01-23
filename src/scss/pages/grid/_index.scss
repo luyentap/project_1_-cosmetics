@@ -1,0 +1,13 @@
+@import "banner";
+.gridpage {
+  display: grid;
+
+  @media screen and (min-width: $screen-tablet) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (min-width: $screen-pc) {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+@import "side-bar";
+@import "content";
