@@ -17,3 +17,7 @@
 @mixin underline{
   border-bottom:solid $width-border $grey;
 }
+@mixin border{
+  border:solid $width-border $grey;
+}
+

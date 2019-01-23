@@ -1,0 +1,35 @@
+.shopping-cart {
+  position: relative;
+  margin: 30px 0 80px 0;
+  width: 100%;
+  tr {
+    td:nth-child(3), td:nth-child(5) {
+      font-family: Charm;
+      font-weight: bold;
+      span{
+        vertical-align: sub;
+
+      }
+    }
+  }
+
+  &__button{
+    float: right;
+    clear: both;
+    margin-top: 20px;
+
+    button{
+      color: white;
+      border: solid transparent;
+      padding: 5px 6px;
+      margin-right: 5px;
+      &:nth-child(1),&:nth-child(2){
+        background: black;
+
+      }
+      &:nth-child(3){
+        background: $green;
+      }
+    }
+  }
+}

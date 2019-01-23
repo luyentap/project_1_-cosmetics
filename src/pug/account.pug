@@ -1,0 +1,48 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a Sản Phẩm >
+        a.cl-green Account >
+
+.container.account
+    .account-table
+        table.table
+            thead
+                th Order
+                th date
+                th Tình trạng thang toán
+                th Tổng
+                th Nợ
+            tbody
+                mixin row
+                    tr
+                        td
+                            | #106
+                        td  May3 , 2013
+                        td Đã thanh toán
+                        td
+                            |345.000
+                            sup đ
+                        td 0
+
+                +row
+                +row
+                +row
+                +row
+    .account-detail
+        p.account-detail__head Chi tiết tài khoản
+        .account-detail__body
+            p.account-detail__body__user
+                i.fa.fa-user
+                span Giang LÊ </br>
+                |Legiang@gmai.com
+            p.account-detail__body__address
+                i.fa.fa-map
+                | Tòa nhà Hà Nội group 442 Đội Cấn, Ba Đình, Hà Nội
+            p.account-detail__body__phone
+                i.fa.fa-phone
+                | (04)141412
+
+include modules/footer

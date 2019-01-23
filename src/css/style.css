@@ -276,6 +276,33 @@ end the common
   padding: 10px 0;
 }
 
+.table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+.table thead {
+  background: #eeeeee;
+}
+.table thead th {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  border: solid 1px #ccc;
+  padding: 10px 0;
+}
+.table tbody tr {
+  border: solid 1px #ccc;
+  text-align: center;
+}
+.table tbody td {
+  border: solid 1px #ccc;
+  padding: 20px 0;
+}
+
 .intro {
   display: flex;
   justify-content: space-evenly;
@@ -1578,7 +1605,6 @@ end the common
   border-radius: 15px;
   border: solid 1px #ccc;
   font-weight: bold;
-  font-weight: bold;
   background: transparent;
 }
 .list-content__body .product__detail__button button:nth-child(2) {
@@ -1590,6 +1616,65 @@ end the common
 }
 .list-content__body .product__detail__button button i.fa-refresh {
   color: black;
+}
+
+.shopping-cart {
+  position: relative;
+  margin: 30px 0 80px 0;
+  width: 100%;
+}
+.shopping-cart tr td:nth-child(3), .shopping-cart tr td:nth-child(5) {
+  font-family: Charm;
+  font-weight: bold;
+}
+.shopping-cart tr td:nth-child(3) span, .shopping-cart tr td:nth-child(5) span {
+  vertical-align: sub;
+}
+.shopping-cart__button {
+  float: right;
+  clear: both;
+  margin-top: 20px;
+}
+.shopping-cart__button button {
+  color: white;
+  border: solid transparent;
+  padding: 5px 6px;
+  margin-right: 5px;
+}
+.shopping-cart__button button:nth-child(1), .shopping-cart__button button:nth-child(2) {
+  background: black;
+}
+.shopping-cart__button button:nth-child(3) {
+  background: #28a745;
+}
+
+.account {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 20px;
+}
+.account .table tr td {
+  padding: 20px;
+}
+.account .table tr td:nth-child(3) {
+  color: red;
+}
+.account-detail__head {
+  border-bottom: solid 1px #ccc;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+.account-detail__body i {
+  margin-right: 10px;
+}
+.account-detail__body p {
+  margin-bottom: 5px;
+}
+.account-detail__body p span {
+  font-size: 18px;
 }
 
 .footer {
