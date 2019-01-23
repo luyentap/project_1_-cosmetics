@@ -1512,6 +1512,86 @@ end the common
   color: black;
 }
 
+.list-content {
+  margin-left: 20px;
+}
+.list-content__head {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.list-content__head__list a {
+  color: black;
+}
+.list-content__head__list a i {
+  margin-right: 6px;
+}
+.list-content__head__paging i, .list-content__head__paging span {
+  margin: 0 8px;
+}
+.list-content__body {
+  display: flex;
+  flex-direction: column;
+}
+.list-content__body .product {
+  display: grid;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 450px) {
+  .list-content__body .product {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 750px) {
+  .list-content__body .product {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.list-content__body .product__img {
+  object-fit: cover;
+}
+.list-content__body .product__detail {
+  font-weight: bold;
+}
+.list-content__body .product__detail__type {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.list-content__body .product__detail__buy span {
+  opacity: 0.5;
+  font-weight: 500;
+}
+.list-content__body .product__detail__text {
+  font-size: 14px;
+  opacity: 0.6;
+  font-weight: 600;
+}
+.list-content__body .product__detail__price {
+  font-family: Lobster;
+  display: flex;
+  font-size: 30px;
+}
+.list-content__body .product__detail__button button {
+  padding: 14px;
+  margin: 10px 2px;
+  border-radius: 15px;
+  border: solid 1px #ccc;
+  font-weight: bold;
+  font-weight: bold;
+  background: transparent;
+}
+.list-content__body .product__detail__button button:nth-child(2) {
+  background: #28a745;
+}
+.list-content__body .product__detail__button button i {
+  font-size: 10px;
+  color: white;
+}
+.list-content__body .product__detail__button button i.fa-refresh {
+  color: black;
+}
+
 .footer {
   background: black;
   color: grey;
