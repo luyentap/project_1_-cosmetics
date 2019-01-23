@@ -1,0 +1,44 @@
+.blog{
+  &-body{
+    display: grid;
+    @media screen and (min-width: $screen-mobile) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: $screen-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: $screen-pc) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .item{
+      display: grid;
+      grid-gap: 16px;
+      margin: 10px;
+      overflow: hidden;
+    }
+    &__img{
+      align-self: center;
+    }
+    &__title{
+      @include underline;
+      font-weight: 500;
+    }
+    &__text {
+      @include underline;
+      p {
+        &:nth-child(1) {
+          font-weight: 300;
+        }
+        &:nth-child(2) {
+          @include font(14px, 300, $grey, italic);
+        }
+      }
+    }
+    &__footer{
+      @include font(14px,300,$grey,normal);
+      display: flex;
+      justify-content: space-between;
+
+    }
+  }
+}

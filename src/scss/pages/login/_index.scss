@@ -1,0 +1,12 @@
+.login{
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    button{
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px 5px;
+    }
+  }
+}

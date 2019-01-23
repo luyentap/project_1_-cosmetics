@@ -1,0 +1,45 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a Sản Phẩm >
+        a.cl-green Trang Sức >
+        a.cl-green Lắc tay
+
+.container
+    .register
+        h1.register__title ĐĂNG KÝ
+        form.form
+            h3.form__title THÔNG TIN CÁ NHÂN
+            .form-element
+                label Tên trước
+                    span.upper-text *
+                input
+            .form-element
+                label Email
+                    span.upper-text *
+                input
+            .form-element
+                label Password
+                    span.upper-text *
+                input
+            p Đăng ký nhận bảng tin
+
+        form.form
+            h3.form__title THÔNG TIN ĐĂNG NHẬP
+            .form-element
+                label Mật khẩu
+                    span.upper-text *
+                input
+            .form-element
+                label Xác nhận mật khẩu
+                    span.upper-text *
+                input
+            .form-element.form-element__button
+                button Gửi
+                button
+                    i.fa.fa-undo
+                    |Quay lại
+
+include modules/footer

@@ -303,6 +303,30 @@ end the common
   padding: 20px 0;
 }
 
+.form {
+  background: #ccc;
+  padding: 40px;
+}
+.form__title {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.form-element label {
+  font-size: 14px;
+}
+.form-element input {
+  width: 100%;
+  padding: 0 20px;
+  height: 30px;
+}
+.form-element button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
 .intro {
   display: flex;
   justify-content: space-evenly;
@@ -1675,6 +1699,298 @@ end the common
 }
 .account-detail__body p span {
   font-size: 18px;
+}
+
+.register__title {
+  font-weight: 400;
+}
+.register .form:nth-child(3) {
+  padding-top: 0;
+}
+.register .form:nth-child(3) .form-element__button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login__head {
+  display: flex;
+  justify-content: space-between;
+}
+.login__head button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+}
+
+.about-us__title {
+  font-weight: 500;
+}
+.about-us__content {
+  display: flex;
+  justify-content: space-between;
+}
+.about-us__content__left {
+  object-fit: cover;
+  margin-right: 20px;
+}
+.about-us__content__right .header-logo {
+  margin-bottom: 20px;
+}
+.about-us__content__right__text {
+  font-weight: 300;
+}
+.about-us__content__right__more {
+  color: #ccc;
+}
+
+.contact__title {
+  font-weight: 500;
+}
+.contact__content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact__content__left {
+  object-fit: cover;
+  margin-right: 20px;
+}
+.contact__content__right .form {
+  background: white;
+}
+.contact__content__right .form-element {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  margin-bottom: 30px;
+}
+.contact__content__right .form-element label {
+  margin-right: 18px;
+}
+.contact__content__right .form-element textarea {
+  height: 100px;
+  border: solid 1px #ccc;
+}
+
+.blog-body {
+  display: grid;
+}
+@media screen and (min-width: 450px) {
+  .blog-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 750px) {
+  .blog-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .blog-body {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.blog-body .item {
+  display: grid;
+  grid-gap: 16px;
+  margin: 10px;
+  overflow: hidden;
+}
+.blog-body__img {
+  align-self: center;
+}
+.blog-body__title {
+  border-bottom: solid 1px #ccc;
+  font-weight: 500;
+}
+.blog-body__text {
+  border-bottom: solid 1px #ccc;
+}
+.blog-body__text p:nth-child(1) {
+  font-weight: 300;
+}
+.blog-body__text p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #ccc;
+}
+.blog-body__footer {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-detail {
+  display: grid;
+}
+@media screen and (min-width: 750px) {
+  .blog-detail {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .blog-detail {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.side-bar__item {
+  margin-bottom: 20px;
+}
+.side-bar__item__header {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+.side-bar__item__body {
+  display: flex;
+  flex-direction: column;
+}
+.side-bar__item__body .list {
+  position: relative;
+}
+.side-bar__item__body .list ul {
+  border-bottom: dotted 1px grey;
+  border-top: 0;
+  padding: 10px 0;
+  border-right: 0;
+  border-left: 0;
+  list-style: circle;
+  position: relative;
+  margin: 0;
+}
+.side-bar__item__body .list:hover li {
+  display: inherit;
+}
+.side-bar__item__body .list:hover i {
+  display: none;
+}
+.side-bar__item__body .list li {
+  margin-left: 20px;
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+.side-bar__item__body .list li:first-child {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #28a745;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+}
+.side-bar__item__body .list i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.side-bar__item:nth-child(2) {
+  font-size: 14px;
+  font-style: italic;
+  color: #ccc;
+}
+.side-bar__item:nth-child(2) button {
+  width: auto;
+  border: solid 1px #ccc;
+  background: transparent;
+  padding: 3px 5px;
+}
+.side-bar__item:nth-child(2) button:nth-child(1) {
+  background: black;
+  color: white;
+}
+.side-bar__item:nth-child(2) .sidebar-grid__item__body {
+  display: inline;
+}
+@media screen and (min-width: 450px) {
+  .side-bar__banner {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .side-bar__banner {
+    display: block;
+  }
+}
+
+.grid-content {
+  margin-left: 20px;
+}
+.grid-content__head {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.grid-content__head__list a {
+  color: black;
+}
+.grid-content__head__list a i {
+  margin-right: 6px;
+}
+.grid-content__head__paging i, .grid-content__head__paging span {
+  margin: 0 8px;
+}
+.grid-content__body {
+  display: grid;
+}
+@media screen and (min-width: 450px) {
+  .grid-content__body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .grid-content__body {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.grid-content__body .product__detail {
+  font-weight: bold;
+  text-align: center;
+}
+.grid-content__body .product__detail__type {
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+.grid-content__body .product__detail__price {
+  font-family: Lobster;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.grid-content__body .product__detail__price__new {
+  color: #28a745;
+}
+.grid-content__body .product__detail__price__old {
+  opacity: 0.4;
+}
+.grid-content__body .product__detail__button button {
+  padding: 14px;
+  margin: 10px 2px;
+  border-radius: 15px;
+  border: solid 1px #ccc;
+  font-weight: bold;
+  font-weight: bold;
+  background: transparent;
+}
+.grid-content__body .product__detail__button button:nth-child(2) {
+  background: #28a745;
+}
+.grid-content__body .product__detail__button button i {
+  font-size: 10px;
+  color: white;
+}
+.grid-content__body .product__detail__button button i.fa-refresh {
+  color: black;
 }
 
 .footer {

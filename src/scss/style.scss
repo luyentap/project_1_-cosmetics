@@ -17,6 +17,7 @@
 @import "modules/header";
 @import "modules/link-intro";
 @import "modules/table";
+@import "modules/form";
 //==========================================================
 
 //all page page
@@ -27,6 +28,12 @@
 @import "pages/list/index";
 @import "pages/cart/index";
 @import "pages/account/index";
+@import "pages/register/index";
+@import "pages/login/index";
+@import "pages/about-us/index";
+@import "pages/contact/index";
+@import "pages/blog/index";
+@import "pages/blog-detail/index";
 //============================================================
 // the footer of page
 //============================================================

@@ -1,0 +1,28 @@
+include modules/header
+
+.container
+    .link-intro
+        a Home >
+        a.cl-green Blog >
+
+.container
+    .blog
+        .blog-body
+            mixin item(img)
+                .item
+                    img.blog-body__img(src=img)
+                    h3.blog-body__title Review son kem Bourjois Velvet
+                    .blog-body__text
+                        p Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+                        p Bởi Nam Trần (27/5/2016)
+                    .blog-body__footer
+                        p Đọc thêm
+                        p 23 Bình luận
+            +item("../img/blog/1.jpg")
+            +item("../img/blog/2.jpg")
+            +item("../img/blog/3.jpg")
+            +item("../img/blog/4.jpg")
+            +item("../img/blog/5.jpg")
+            +item("../img/blog/6.jpg")
+include modules/footer
+
