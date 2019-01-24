@@ -5,6 +5,7 @@
 
       @include underline;
       padding-bottom: 8px;
+      margin-bottom: 20px;
       @include font(16px, bold, black, null) {
         text-transform: uppercase
       }
@@ -55,13 +56,13 @@
 
     }
     &:nth-child(3){
-
       @include font($size: 14px, $style: italic, $color: $grey);
       button {
         width: auto;
-        border: solid $width-border $grey;
+        @include border;
         background: transparent;
         padding: 3px 5px;
+        margin: 5px 2px;
         &:nth-child(1){
           background: black;
           color:white;

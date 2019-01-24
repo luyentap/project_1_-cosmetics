@@ -2,9 +2,10 @@
 .footer {
   background: black;
   color: grey;
+  padding: 0 10%;
   &__contact {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding: 40px 0 20px 0;
     border-bottom: solid 1px grey;

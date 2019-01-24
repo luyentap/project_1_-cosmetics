@@ -1,5 +1,6 @@
 .blog-detail {
   display: grid;
+  grid-gap: 30px;
 
   @media screen and (min-width: $screen-tablet) {
     grid-template-columns: 1fr;
@@ -7,6 +8,10 @@
   @media screen and (min-width: $screen-pc) {
     grid-template-columns: 1fr 4fr;
   }
+}
+.page__title{
+  font-size: 30px;
+  font-weight: 400;
 }
 @import "side-bar";
 @import "content";

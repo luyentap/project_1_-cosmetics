@@ -5,13 +5,8 @@ include modules/header
         a Home >
         a Sản Phẩm >
         a.cl-green Trang Sức >
-
 .grid-banner
-    .grid-banner__text
-        h1.grid-banner__text__header Giảm giá 50%
-        p Trong vòng 30 ngày </br> (25/5-28/5/2015)
-
-    img.grid-banner__img(src="../img/grid/av.png")
+    img(src="../img/grid/banner-page.jpg")
 
 .container.gridpage
     .sidebar-grid
@@ -80,61 +75,28 @@ include modules/header
                     span 3
                     i.fa.fa-caret-right
         .list-content__body
-            .product
-                img(src="../img/home/Product copy 4.png")
-                .product__detail
-                    .product__detail__type Mỹ phẩm châu Âu hàng đầu thế giới
-                    .product__detail__buy
-                        each val in [1, 2, 3, 4]
-                            i.fa.fa-heart
-                        span ( 4 lượt mua)
-                    p.product__detail__text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt earum et, expedita illo in iste laudantium nam quasi, ratione sint veniam veritatis vitae. Cumque iusto quia rem repellat sint.
-                    p.product__detail__price 35000đ
+            mixin product
+                .product
+                    img(src="../img/home/Product copy 4.png")
+                    .product__detail
+                        .product__detail__type Mỹ phẩm châu Âu hàng đầu thế giới
+                        .product__detail__buy
+                            each val in [1, 2, 3, 4]
+                                i.fa.fa-heart
+                            span ( 4 lượt mua)
+                        p.product__detail__text
+                            | Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                        p.product__detail__price 35000đ
 
-                    .product__detail__button
-                        button MUA HÀNG
-                        button
-                            i.fa.fa-heart
-                        button
-                            i.fa.fa-refresh
-            .product
-                img(src="../img/home/Product copy 4.png")
-                .product__detail
-                    .product__detail__type Mỹ phẩm châu Âu hàng đầu thế giới
-                    .product__detail__buy
-                        each val in [1, 2, 3, 4]
-                            i.fa.fa-heart
-                        span ( 4 lượt mua)
-                    p.product__detail__text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt earum et, expedita illo in iste laudantium nam quasi, ratione sint veniam veritatis vitae. Cumque iusto quia rem repellat sint.
-                    p.product__detail__price 35000đ
-
-                    .product__detail__button
-                        button MUA HÀNG
-                        button
-                            i.fa.fa-heart
-                        button
-                            i.fa.fa-refresh
-            .product
-                img(src="../img/home/Product copy 4.png")
-                .product__detail
-                    .product__detail__type Mỹ phẩm châu Âu hàng đầu thế giới
-                    .product__detail__buy
-                        each val in [1, 2, 3, 4]
-                            i.fa.fa-heart
-                        span ( 4 lượt mua)
-                    p.product__detail__text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt earum et, expedita illo in iste laudantium nam quasi, ratione sint veniam veritatis vitae. Cumque iusto quia rem repellat sint.
-                    p.product__detail__price 35000đ
-
-                    .product__detail__button
-                        button MUA HÀNG
-                        button
-                            i.fa.fa-heart
-                        button
-                            i.fa.fa-refresh
-
+                        .product__detail__button
+                            button MUA HÀNG
+                            button
+                                i.fa.fa-heart
+                            button
+                                i.fa.fa-refresh
+            +product
+            +product
+            +product
         .list-content__head
             .list-content__head__list
                 a(href="grid.html")

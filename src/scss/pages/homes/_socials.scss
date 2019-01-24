@@ -6,8 +6,9 @@
   border-top: solid 1px $grey;
   padding-top: 30px;
   p {
-    opacity: 0.6;
+    opacity: 0.4;
     font-weight: bold;
+    font-size: 12px;
     &:first-child{
       opacity: 1;
     }
@@ -40,7 +41,7 @@
     i {
       background: white;
       color: black;
-      font-size: 12px;
+      font-size: 14px;
 
       border-radius: 50%;
       border: solid 2px black;

@@ -1,0 +1,2 @@
+pug pug/detail.pug -o html/ --watch
+sass scss/style.scss css/style.css --watch

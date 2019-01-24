@@ -1,80 +1,54 @@
-.grid-content{
-  margin-left: 20px;
-  &__head {
-    @include underline;
-    padding-bottom: 8px;
-    display: flex;
-    justify-content: space-between;
-    &__list{
-      a{
-        color: black;
-        i{
-          margin-right: 6px;
-        }
+.blog-content {
+  &__img {
+    width: 100%;
+    object-fit: cover;
+
+    margin-bottom: 40px;
+  }
+  &__text {
+    &__title {
+      @include underline;
+      font-size: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    &__body {
+      p:nth-child(1){
+        font-weight: 400;
+      }
+      p:nth-child(2){
+        @include underline;
+        @include  font(16px,500,$grey,italic);
+        padding-bottom: 15px;
+        margin: 20px 0;
       }
     }
-    &__paging{
-      i,span{
-        margin:  0 8px;
-      }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      color: $grey;
     }
   }
-  &__body {
-    display: grid;
-    @media screen and (min-width: $screen-mobile) {
-      grid-template-columns: 1fr 1fr;
+  &__tag{
+    @include underline;
+    padding-top:40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    span{
+      color: $grey;
     }
-    @media screen and (min-width: $screen-tablet) {
+  }
+  .form{
+    padding: 0;
+    &-element{
+      display: grid;
+      grid-template-columns: 1fr 10fr;
+
     }
-    @media screen and (min-width: $screen-pc) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .product {
-      &__detail {
-        font-weight: bold;
-        text-align: center;
-
-        &__type {
-          text-transform: uppercase;
-          opacity: 0.4;
-        }
-        &__name {
-        }
-        &__price {
-          font-family: Lobster;
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-          &__new {
-            color: $green;
-          }
-          &__old {
-            opacity: 0.4;
-          }
-        }
-        &__button button {
-          padding: 14px;
-          margin: 10px 2px;
-          border-radius: 15px;
-          border: solid $width-border $grey;
-          font-weight: bold;
-          font-weight: bold;
-
-          background: transparent;
-
-          &:nth-child(2) {
-            background: $green;
-          }
-          i {
-            font-size: 10px;
-            color: white;
-          }
-          i.fa-refresh{
-            color: black;
-          }
-        }
-      }
+    button{
+      white-space: nowrap;
     }
   }
 }

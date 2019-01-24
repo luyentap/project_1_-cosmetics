@@ -1,15 +1,15 @@
-.contain_header{
-  border-bottom: solid  1px $grey;
+.contain_header {
+  border-bottom: solid 1px $grey;
   z-index: 999;
   height: 12vh;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
 
-  //width: 100%;
   &-logo {
     font-family: "Thirsty Script Extrabold";
     font-size: 34px;
@@ -27,10 +27,14 @@
 
     font-family: "Open Sans";
     font-size: 12px;
+    white-space: nowrap;
     li {
       padding: 20px;
       a {
         color: black;
+      }
+      &:hover .menu-product{
+        visibility: visible;
       }
     }
 
@@ -44,10 +48,65 @@
       display: inline-flex;
 
     }
+    /** menu product**/
+    &__product {
+      position: relative;
+      .menu-product {
+        visibility: hidden;
+        position: absolute;
+        left: -150%;
+        top: 40px;
 
+        display: flex;
+
+        background: white;
+        border: solid 2px #78973c;
+        &:before {
+          $width: 11px;
+          position: absolute;
+          top: -$width;
+          left: 50%;
+
+          width: 0;
+          height: 0;
+          content: '';
+          border-left: $width solid transparent;
+          border-right: $width solid transparent;
+          border-bottom: 8px solid $green;
+        }
+        &:after{
+          content: '>';
+          position: absolute;
+          top:-20px;
+          left: 50%;
+          z-index: 999;
+        }
+        &__item {
+          padding: 40px;
+          white-space: nowrap;
+
+          &__title {
+            @include underline;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 500;
+          }
+          &__list {
+            p {
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
   }
+
   &__right {
     display: flex;
+    position: relative;
     button {
       padding: 20px;
       border: solid transparent 0px;
@@ -66,9 +125,70 @@
           visibility: hidden;
 
         }
+      }
+
+      &:hover .cart {
+        visibility: visible;
+      }
+    }
+    /**menu cart**/
+    .cart {
+      visibility: hidden;
+      position: absolute;
+      //top:60px;
+      left: -50%;
+      padding: 20px;
+      border: solid 2px #78973c;
+      background: white;
+      .list__item {
+        @include underline;
+      }
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+        &__img {
+        }
+        &__description {
+          &__name {
+            font-size: 12px;
+            font-weight: 500;
+          }
+          &__price {
+            @include font(14px, 600, $green, normal);
+            font-family: Charm;
+          }
+        }
+
+      }
+      &__sum-price {
+        padding: 20px 0;
+        span {
+          float: right;
+          color: green;
+          font-family: Charm;
+          font-weight: 500;
+        }
+      }
+      &__button {
+        background: black;
+        color: white;
+        padding: 4px 10px;
 
       }
     }
+    .cart:before {
+      $width: 11px;
+      position: absolute;
+      top: -$width;
 
+      //clip-path: polygon(55% 84%, 0 100%, 100% 100%);
+      width: 0;
+      height: 0;
+      content: '';
+      border-left: $width solid transparent;
+      border-right: $width solid transparent;
+      border-bottom: 8px solid $green;
+    }
   }
 }

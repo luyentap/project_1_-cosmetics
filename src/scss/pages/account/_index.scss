@@ -17,6 +17,7 @@
       @include underline;
       @include font(16px,500,black,null){text-transform: uppercase};
       padding-bottom: 20px;
+      margin-bottom: 20px;
     }
     &__body{
       i{
@@ -24,6 +25,7 @@
       }
       p{
         margin-bottom: 5px;
+        font-size: 14px;
 
         span{
           font-size: 18px;

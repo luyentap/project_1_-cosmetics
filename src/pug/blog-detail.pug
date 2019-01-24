@@ -5,30 +5,23 @@ include modules/header
         a Home >
         a.cl-green Blog >
 
+h2.container.page__title BLOG
+
 .container.blog-detail
     .side-bar
         .side-bar__item
             h3.side-bar__item__header Bài viết mới nhất
             .side-bar__item__body
-                .blog-new
-                    img.blog-new__img(src="../img/blog-detail/2a.jpg")
-                    p.blog-new__time
-                        |11
-                        span Tháng 5
-                    p.blog-new__author Đăng bởi Giang Lê
-                .blog-new
-                    img.blog-new__img(src="../img/blog-detail/2a.jpg")
-                    p.blog-new__time
-                        | 11
-                        span Tháng 5
-                    p.blog-new__author Đăng bởi Giang Lê
-                .blog-new
-                    img.blog-new__img(src="../img/blog-detail/2a.jpg")
-                    p.blog-new__time
-                        | 11
-                        span Tháng 5
-                    p.blog-new__author Đăng bởi Giang Lê
-
+                mixin blog
+                    .blog-new
+                        img.blog-new__img(src="../img/blog-detail/2a.jpg")
+                        p.blog-new__time
+                            |11
+                            span / Tháng 5
+                        p.blog-new__author Đăng bởi Giang Lê
+                +blog
+                +blog
+                +blog
         .side-bar__item
             h3.side-bar__item__header BLOG TAGS
             .side-bar__item__body
@@ -47,11 +40,38 @@ include modules/header
                 button Thời trang nữ
                 button Trẻ em
                 button Thời trang nữ
+        .side-bar__item
+            h3.side-bar__item__header <LA></LA>TEST VIDEO
         img.side-bar__banner(src="../img/blog-detail/3.jpg")
     .blog-content
-        .blog-content__head
-
-
-
+        img.blog-content__img(src="../img/blog-detail/1.jpg")
+        .blog-content__text
+            h3.blog-content__text__title nàng béo không ngại diện váy nổi bật
+            .blog-content__text__body
+                p Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Trong tiết xuân hè, nàng ngoại cỡ thắp sáng phong cách bằng quần họa tiết nhiệt đới đi kèm áo sơ mi nhã nhặn.Trang phục họa tiết điện tử được nàng phối cùng chân váy kẻ caro, làm nên style vừa hiện đại, vừa phảng phất nét cổ điển.Lối diện đồ hàng ngày đơn giản, khỏe khoắn của cô khi kết hợp chất liệu jean.Nữ blogger rực rỡ khi hòa trộn các gam đỏ, hồng, tím... một cách vui tươi, kèm theo các phụ kiện điệu đà.
+                p Bởi Nam Trần (27/5/2015)
+            .blog-content__text__footer
+                a(src="") Đọc thêm
+                a(src="") 23 bình luận
+        .blog-content__tag
+            span Tag:
+            | Men
+        .blog-contnet__form
+            form.form
+                h3.form__title Đóng góp ý kiến
+                .form-element
+                    label Tên
+                        span *
+                    input
+                .form-element
+                    label Emai;
+                        span *
+                    input
+                .form-element
+                    label Ý kiến;
+                        span *
+                    textarea
+                .form-element.form-element__button
+                    button GỬI Ý KIẾN
 
 include modules/footer

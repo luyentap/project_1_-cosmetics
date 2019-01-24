@@ -21,6 +21,7 @@
   }
   &__body {
     display: grid;
+    grid-gap: 20px;
     @media screen and (min-width: $screen-mobile) {
       grid-template-columns: 1fr 1fr;
     }
@@ -31,6 +32,11 @@
     }
 
     .product {
+
+      img:first-child{
+        border-bottom: dotted 2px $grey;
+        padding-bottom: 2px;
+      }
       &__detail {
         font-weight: bold;
         text-align: center;
@@ -40,6 +46,7 @@
           opacity: 0.4;
         }
         &__name {
+          font-weight: 500;
         }
         &__price {
           font-family: Lobster;
@@ -47,7 +54,7 @@
           justify-content: space-evenly;
           align-items: center;
           &__new {
-            color: $green;
+            color: $green-button;
           }
           &__old {
             opacity: 0.4;
@@ -57,14 +64,14 @@
           padding: 14px;
           margin: 10px 2px;
           border-radius: 15px;
-          border: solid $width-border $grey;
+          @include border;
           font-weight: bold;
           font-weight: bold;
 
           background: transparent;
 
           &:nth-child(2) {
-            background: $green;
+            background: $green_button;
           }
           i {
             font-size: 10px;

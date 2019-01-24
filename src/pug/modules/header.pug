@@ -17,8 +17,26 @@ head
                 a(href="index.html") TRANG CHỦ
             li
                 a(href="about-us.html") GIỚI THIỆU
-            li
+            li.header__primary__product
                 a(href="list.html") SẢN PHẨM
+                //before: mui ten border, after dau tro xuong khi hvoer
+                .menu-product
+                    mixin item
+                        .menu-product__item
+                            h6.menu-product__item__title DƯỠNG DA
+                            .menu-product__item__list
+                                p Áo khoác
+                                p Bộ áo liền quần
+                                p Dress
+                                p Quần/Váy
+                                p Quần sort
+                                p Quần jean
+                                p Đồ đan
+                                p Áo nỉ
+                    +item
+                    +item
+                    +item
+
             li
                 a(href="blog.html") TIN TỨC
             li
@@ -27,8 +45,24 @@ head
                 a(href="register.html") ĐĂNG KÝ
         .header__right
             button
-                a(href="shopping-cart.html")
+                a
                     i.fa.fa-shopping-cart
+                .cart
+                    .list__item
+                        mixin item
+                            .cart__item
+                                img.cart__item__img(src="../img/home/cart-item.jpg")
+                                .cart__item__description
+                                    p.cart__item__description__name Áo sơ mi nam
+                                    p.cart__item__description__price 120.000
+                                        sup đ
+                                a x
+                        +item
+                        +item
+                    p.cart__sum-price Tổng số
+                        span 240.000
+                            sup đ
+                    a.cart__button(src="shopping-cart.html") GIỎ HÀNG
             button
                 a
                     i.fa.fa-search

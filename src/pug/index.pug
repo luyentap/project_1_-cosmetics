@@ -1,20 +1,21 @@
 include modules/header
-//intro
+
 .modal
     .modal-content
-        h3 HÃY EMAIL
-        p Hãy gửi email cho chúng tôi </br> Sự hài lòng của bạn là thành công củachúng tôi
+        h3.list-product  GỬI EMAIL
+        p Hãy gửi email của bạn cho chúng tôi để được tư vấn tốt nhất
+            </br> Sự hài lòng của bạn là thành công củachúng tôi
         input(placeholder="Email của bạn")
         a GỬI EMAIL
 
-
+//intro
 .intro
     .intro__left
         img(src="../img/home/01_Home_03.jpg")
         h1.intro__left__header Green Vera
         p.intro__left__text Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
         p.intro__left__price Giá chỉ  750.000
-            span đ
+            sup đ
         p.intro__left__buy MUA HÀNG
     .intro__right
         img(src="../img/home/01_Home_02.jpg")
@@ -70,7 +71,7 @@ include modules/header
             .combo__child__description
                 img(src="../img/home/Layer 12.png")
                 p Quyến rũ hơn
-                p Cùng
+                p CÙNG
                     span D A I S Y
 
 
@@ -104,29 +105,22 @@ section.list-product
         p.list-product__type__item.list-product__type__item--selected Trang sức
         p.list-product__type__item Quà tặng
     .products
-        .product
-            img(src="../img/home/Product copy 9.png")
-            .product__detail
-                .product__detail__type OHUI
-                .product__detail__name Mỹ phẩm châu Âu
-                img(src="../img/home/Shape 16 2.png")
-                .product__detail__price
-                    .product__detail__price__new 35000
-                        span đ
-                    .product__detail__price__old 45000
-                        span đ
+        mixin product-no_selected(img)
+            .product
+                img.product__img(src=img)
+                .product__detail
+                    .product__detail__type OHUI
+                    .product__detail__name Mỹ phẩm châu Âu
+                    img(src="../img/home/Shape 16 2.png")
+                    .product__detail__price
+                        .product__detail__price__new 35000
+                            span đ
+                        .product__detail__price__old 45000
+                            span đ
+        +product-no_selected("../img/home/Product copy 9.png")
         img.arrow_left(src="../img/home/arrow_left.jpg")
-        .product
-            img(src="../img/home/Product copy 4.png")
-            .product__detail
-                .product__detail__type OHUI
-                .product__detail__name Mỹ phẩm châu Âu
-                img(src="../img/home/Shape 16 2.png")
-                .product__detail__price
-                    .product__detail__price__new 35000
-                        span đ
-                    .product__detail__price__old 45000
-                        span đ
+        +product-no_selected("../img/home/Product copy 4.png")
+        //product: is selected
         .product
             img(src="../img/home/01_Home_32.jpg")
             .product__detail
@@ -145,46 +139,16 @@ section.list-product
                     button
                         i.fa.fa-refresh
 
-        .product
-            img(src="../img/home/01_Home_35.jpg")
-            .product__detail
-                .product__detail__type OHUI
-                .product__detail__name Mỹ phẩm châu Âu
-                img(src="../img/home/Shape 16 2.png")
-                .product__detail__price
-                    .product__detail__price__new 35000
-                        span đ
-                    .product__detail__price__old 45000
-                        span đ
-        .product
-            img(src="../img/home/01_Home_38.jpg")
-            .product__detail
-                .product__detail__type OHUI
-                .product__detail__name Mỹ phẩm châu Âu
-                img(src="../img/home/Shape 16 2.png")
-                .product__detail__price
-                    .product__detail__price__new 35000
-                        span đ
-                    .product__detail__price__old 45000
-                        span đ
+        +product-no_selected("../img/home/01_Home_35.jpg")
+        +product-no_selected("../img/home/01_Home_38.jpg")
         img.arrow_right(src="../img/home/arrow-right.png")
-        .product
-            img(src="../img/home/Product copy 10.png")
-            .product__detail
-                .product__detail__type OHUI
-                .product__detail__name Mỹ phẩm châu Âu
-                img(src="../img/home/Shape 16 2.png")
-                .product__detail__price
-                    .product__detail__price__new 35000
-                        span đ
-                    .product__detail__price__old 45000
-                        span đ
+        +product-no_selected("../img/home/Product copy 10.png")
 
 //about-us
 section.social
     p.social--actived
         i.fa.fa-facebook
-        | FACEBOOK
+        | facebook
     p
         i.fa.fa-twitter
         | twitter

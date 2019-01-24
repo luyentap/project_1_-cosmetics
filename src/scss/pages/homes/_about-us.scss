@@ -2,6 +2,7 @@
   @media screen and (min-width: $screen-mobile) {
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 20px;
 
   }
   @media screen and (min-width: $screen-tablet) {
@@ -103,6 +104,7 @@
           border: solid 1px $grey;
           background: transparent;
           padding: 5px;
+          margin: 5px 2px;
           &:first-child{
             background: $green;
             color:white;

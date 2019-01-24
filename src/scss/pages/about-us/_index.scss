@@ -13,8 +13,11 @@
       .header-logo{
         margin-bottom: 20px;
       }
+      &__title{
+        font-weight: 400;
+      }
       &__text{
-        font-weight: 300;
+        font-weight: 400;
       }
       &__more{
         color:$grey;

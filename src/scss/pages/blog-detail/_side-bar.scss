@@ -2,9 +2,9 @@
   &__item {
     margin-bottom: 20px;
     &__header {
-
       @include underline;
       padding-bottom: 8px;
+      margin-bottom: 20px;
       @include font(16px, bold, black, null) {
         text-transform: uppercase
       }
@@ -12,68 +12,44 @@
     &__body {
       display: flex;
       flex-direction: column;
-      .list{
-        position: relative;
-        ul {
-          border-bottom: dotted $width-border grey;
-          border-top: 0;;
-          padding: 10px 0;
-          border-right: 0;
-          border-left: 0;
-          list-style: circle;
-          position: relative;
-          margin: 0;
-        }
-        &:hover li{
-          display: inherit;
-        }
-        &:hover i{
-          display: none;
-        }
-        li {
-          margin-left: 20px;
-          display: none;
-          @include font(14px, 500, black, null);
-          &:first-child {
-            margin: 0;
-            @include font(15px, 500, $green, null);
-            text-transform: uppercase;
-            position: relative;
-            display: block;
-          }
-        }
-        i{
-          position: absolute;
-          right: 0;
-          top:50%
-        }
-      }
+      padding-top: 20px;
     }
 
-    &:nth-child(2){
+    &:nth-child(1){
+        .blog-new{
+          margin-bottom: 40px;
+          &__img{
+            float: left;
+            margin-right: 10px;
+          }
+          &__time{
+            font-size:25px;
+            font-weight: 700;
 
-      @include font($size: 14px, $style: italic, $color: $grey);
+            span{
+              font-size: 13px;
+              font-weight: 700;
+            }
+          }
+          &__author{
+            @include  font(14px,500,$grey,italic);
+          }
+        }
+    }
+    &:nth-child(2){
       button {
-        width: auto;
-        border: solid $width-border $grey;
+        @include border;
         background: transparent;
         padding: 3px 5px;
+        margin: 5px 3px;
         &:nth-child(1){
-          background: black;
+          background: $green;
           color:white;
         }
       }
-      .sidebar-grid__item__body{
-        display: inline;
-      }
     }
-  }
-  &__banner{
-    @media screen and (min-width: $screen-mobile) {
-      display: none;
-    }
-    @media screen and (min-width: $screen-pc) {
-      display: block;
+    .side-bar__item__body{
+      display: inline;
     }
   }
 }
